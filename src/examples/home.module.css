@@ -1,0 +1,20 @@
+.page {
+  color: blue;
+}
+
+.page h1 {
+  color: gold;
+}
+
+.page h5 {
+  text-transform: capitalize;
+  color: white;
+}
+
+.page p {
+  color: red;
+}
+
+.text {
+  text-transform: capitalize;
+}
