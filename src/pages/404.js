@@ -4,7 +4,12 @@ import Layout from "../components/Layout";
 const Error = () => {
   return (
     <Layout>
-      <h1>This is the Error page</h1>
+      <main className="error-page">
+        <section>
+          <h1>404</h1>
+          <h3>Page Not Found</h3>
+        </section>
+      </main>
     </Layout>
   );
 };
