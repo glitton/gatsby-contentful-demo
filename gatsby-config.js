@@ -7,16 +7,12 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Simply Recipes",
-    description: "Recipe site",
+    title: "World of Shapes",
+    description:
+      "Site about pasta shapes and example recipes.  Built do show the Gatsby and Contentful integration.",
     originalAuthor: "@johnsmilga",
     secondaryAuthor: "@LittonG",
-    person: { name: "John", age: 32 },
-    simpleData: ["item 1", "item 2"],
-    complexData: [
-      { name: "John", age: 32 },
-      { name: "Susan", age: 21 },
-    ],
+    inspiration: "https://github.com/john-smilga/gatsby-v3-tutorial-recipes",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -28,6 +24,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `7vu1gwh4om5t`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: `YYnPIcOPvoXmi4NwNY5vDT-tRTnP9nbqsvLAa8m5thY`,
       },
     },
   ],

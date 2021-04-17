@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="page-footer">
       <p>
-        &copy; {new Date().getFullYear()} <span>SimplyRecipes</span> Built with{" "}
+        &copy; {new Date().getFullYear()} <span>World </span> Built with{" "}
         <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
           Gatsby
         </a>
@@ -12,5 +12,5 @@ const Footer = () => {
     </footer>
   );
 };
-
+//Based on SimplyRecipes Gatsby V3 tutorial of John Smilga https://github.com/john-smilga/gatsby-v3-tutorial-recipes
 export default Footer;

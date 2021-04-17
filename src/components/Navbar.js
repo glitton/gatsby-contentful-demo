@@ -28,12 +28,12 @@ const Navbar = () => {
             home
           </Link>
           <Link
-            to="/pastas"
+            to="/shapes"
             className="nav-link"
             activeClassName="active-link"
             onClick={() => setshow(false)}
           >
-            pastas
+            shapes
           </Link>
           <Link
             to="/tags"

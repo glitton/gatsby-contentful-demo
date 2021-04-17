@@ -18,7 +18,7 @@ export default function Home() {
           <div className="hero-container">
             <div className="hero-text">
               <h1>World of Shapes</h1>
-              <h4>a guide to pasta shapes</h4>
+              <h4>pasta shapes and recipes</h4>
             </div>
           </div>
         </header>

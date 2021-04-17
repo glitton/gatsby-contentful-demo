@@ -11,14 +11,12 @@ const About = () => {
           <article>
             <h2>We Are All About Pasta Shapes!</h2>
             <p>
-              Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi
-              welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
-              garlic.
+              Pastas come in all kinds of shapes. Long, short, curly bowties and
+              those that look like little ears! Learn about them here and
+              understand the differences between a rotini and a tortellini or a
+              farfelle and a talatielle.
             </p>
-            <p>
-              Grape wattle seed kombu beetroot horseradish carrot squash
-              brussels sprout chard.
-            </p>
+            <p>Check out what sauce works best and some simple recipes.</p>
             <Link to="/contact" className="btn">
               contact
             </Link>
