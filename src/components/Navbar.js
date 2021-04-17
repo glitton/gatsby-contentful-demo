@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FiAlignJustify } from "react-icons/fi";
 import logo from "../assets/images/logo.svg";
+import logo1 from "../assets/images/pasta.svg";
+import logo2 from "../assets/images/spaghetti.svg";
 
 const Navbar = () => {
   const [show, setshow] = useState(false); //don't show navlinks when false
@@ -11,7 +13,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="simply recipes logo" />
+            <img src={logo} alt="simply pastas logo" />
           </Link>
           <button className="nav-btn" onClick={() => setshow(!show)}>
             <FiAlignJustify />
