@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FiAlignJustify } from "react-icons/fi";
-import logo from "../assets/images/logo.svg";
-import logo1 from "../assets/images/pasta.svg";
-import logo2 from "../assets/images/spaghetti.svg";
+import logo from "../assets/images/pasta-logo.png";
+// logo made by monkik https://www.flaticon.com/authors/monkik
 
 const Navbar = () => {
   const [show, setshow] = useState(false); //don't show navlinks when false
@@ -13,7 +12,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <img src={logo} alt="simply pastas logo" />
+            <img src={logo} alt="simply pastas logo" className="logo" />
           </Link>
           <button className="nav-btn" onClick={() => setshow(!show)}>
             <FiAlignJustify />
@@ -29,7 +28,7 @@ const Navbar = () => {
             home
           </Link>
           <Link
-            to="/recipes"
+            to="/pastas"
             className="nav-link"
             activeClassName="active-link"
             onClick={() => setshow(false)}

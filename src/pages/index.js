@@ -17,8 +17,8 @@ export default function Home() {
           />
           <div className="hero-container">
             <div className="hero-text">
-              <h1>Simply Pasta Shapes</h1>
-              <h4>long, short, curly, bowties</h4>
+              <h1>World of Shapes</h1>
+              <h4>a guide to pasta shapes</h4>
             </div>
           </div>
         </header>

@@ -362,6 +362,9 @@ form > *:last-child {
 .nav-btn svg {
   font-size: 1.5rem;
 }
+.logo {
+  background: var(--backgroundColor);
+}
 .nav-links {
   height: 0;
   overflow: hidden;
