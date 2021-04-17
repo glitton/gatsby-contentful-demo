@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const Recipes = () => {
+const Pastas = () => {
   return (
     <Layout>
-      <h1>This is the recipes page</h1>
+      <h1>This is the Pastas page</h1>
     </Layout>
   );
 };
 
-export default Recipes;
+export default Pastas;

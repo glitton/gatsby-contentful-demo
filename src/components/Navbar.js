@@ -32,7 +32,7 @@ const Navbar = () => {
             activeClassName="active-link"
             onClick={() => setshow(false)}
           >
-            recipes
+            pastas
           </Link>
           <Link
             to="/tags"

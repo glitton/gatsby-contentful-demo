@@ -9,7 +9,7 @@ const About = () => {
       <main className="page">
         <section className="about-page">
           <article>
-            <h2>We Are All About Simplifying Recipes!</h2>
+            <h2>We Are All About Pasta Shapes!</h2>
             <p>
               Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi
               welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
@@ -24,8 +24,8 @@ const About = () => {
             </Link>
           </article>
           <StaticImage
-            src="../assets/images/about.jpeg"
-            alt="person pouring salt in bowl"
+            src="../assets/images/about.jpg"
+            alt="pasta on a wooden spoon"
             className="about-img"
             placeholder="blurred"
           />

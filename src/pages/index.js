@@ -7,8 +7,9 @@ export default function Home() {
     <Layout>
       <main className="page">
         <header className="hero">
+          {/* Photo by Zoran Borojevic on Unsplash */}
           <StaticImage
-            src="../assets/images/main.jpeg"
+            src="../assets/images/main.jpg"
             alt="flour and eggs"
             className="hero-img"
             placeholder="tracedSVG"
@@ -16,8 +17,8 @@ export default function Home() {
           />
           <div className="hero-container">
             <div className="hero-text">
-              <h1>Simple Recipes</h1>
-              <h4>no fluff, just recipes</h4>
+              <h1>Simply Pasta Shapes</h1>
+              <h4>long, short, curly, bowties</h4>
             </div>
           </div>
         </header>
