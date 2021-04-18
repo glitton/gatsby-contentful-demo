@@ -1,10 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout";
+import AllShapesRecipes from "../components/AllShapesRecipes";
 
 const Shapes = () => {
   return (
     <Layout>
-      <h1>This is the Shapes page</h1>
+      <main className="page">
+        <AllShapesRecipes />
+      </main>
     </Layout>
   );
 };
