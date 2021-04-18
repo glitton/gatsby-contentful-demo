@@ -27,11 +27,10 @@ const AllShapesRecipes = () => {
   const shapesRecipes = data.allContentfulShapesRecipes.nodes;
 
   return (
-    <div>
-      <h4>all shapes and recipes</h4>
+    <section className="recipes-container">
       <TagsList shapesRecipes={shapesRecipes} />
       <ShapesRecipes shapesRecipes={shapesRecipes} />
-    </div>
+    </section>
   );
 };
 

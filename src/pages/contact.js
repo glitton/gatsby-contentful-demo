@@ -1,7 +1,10 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { Link, graphql } from "gatsby";
+import ShapesRecipes from "../components/ShapesRecipes";
 
-const Contact = () => {
+const Contact = ({ data }) => {
+  const shapesRecipes = data.allContentfulShapesRecipes.nodes;
   return (
     <Layout>
       <main className="page">
@@ -9,12 +12,14 @@ const Contact = () => {
           <article className="contact-info">
             <h3>Contact Us Now!</h3>
             <p>
-              Cotton candy chocolate pie wafer pie jelly-o. Candy canes sugar
-              plum gingerbread chocolate pastry apple pie ice cream chupa chups.
+              We are constantly adding various pasta shapes that entice and
+              educate our audience. If you want to know more about a different
+              pasta shape and have a recipe you want to share, this is the space
+              to be!
             </p>
             <p>
-              Jelly beans pudding jelly-o pastry carrot cake. Pie cheesecake
-              soufflé cotton candy.
+              Send us a message and we will review your contribution and feature
+              it in our shape and recipe of the month!
             </p>
           </article>
           <article>
@@ -37,9 +42,35 @@ const Contact = () => {
             </form>
           </article>
         </section>
+        <section className="featured-recipes">
+          <h5>Buon appetito!</h5>
+          <ShapesRecipes shapesRecipes={shapesRecipes} />
+        </section>
       </main>
     </Layout>
   );
 };
+
+export const query = graphql`
+  {
+    allContentfulShapesRecipes(
+      sort: { fields: title }
+      filter: { featured: { eq: true } }
+    ) {
+      nodes {
+        id
+        title
+        prepTime
+        cookTime
+        content {
+          id
+        }
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+`;
 
 export default Contact;
