@@ -12,7 +12,7 @@ const TagsList = ({ shapesRecipes }) => {
           const [text, value] = tag;
           return (
             <Link to={`/${text}`} key={index}>
-              {text}({value})
+              {text} ({value})
             </Link>
           );
         })}
