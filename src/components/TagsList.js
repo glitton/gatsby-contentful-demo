@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import setupTags from "../utils/setupTags";
+import slugify from "slugify"; //adds hyphen in URL in case text has two words
 
 const TagsList = ({ shapesRecipes }) => {
   const newTags = setupTags(shapesRecipes);
@@ -10,8 +11,9 @@ const TagsList = ({ shapesRecipes }) => {
       <div className="tags-list">
         {newTags.map((tag, index) => {
           const [text, value] = tag;
+          const slug = slugify(text, { lower: true });
           return (
-            <Link to={`/${text}`} key={index}>
+            <Link to={`/${slug}`} key={index}>
               {text} ({value})
             </Link>
           );
