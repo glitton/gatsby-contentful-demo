@@ -18,7 +18,7 @@ const ShapesRecipes = ({ shapesRecipes = [] }) => {
             />
             <h5>{title}</h5>
             <p>
-              Prep: {prepTime}min | Cook: {cookTime}min
+              Prep: {prepTime} min. | Cook: {cookTime} min.
             </p>
           </Link>
         );
