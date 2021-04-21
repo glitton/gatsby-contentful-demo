@@ -54,9 +54,15 @@ const ShapesRecipeTemplate = ({ data }) => {
               <p className="recipe-tags">
                 Tags:
                 {tags.map((tag, index) => {
+<<<<<<< HEAD
                   const slug = slugify(tag, { lower: true });
                   return (
                     <Link to={`/tags/${slug}`} key={index}>
+=======
+                  const recipeSlug = slugify(tag, { lower: true });
+                  return (
+                    <Link to={`/${recipeSlug}`} key={index}>
+>>>>>>> tag-pages
                       {tag}
                     </Link>
                   );

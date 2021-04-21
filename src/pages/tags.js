@@ -13,11 +13,18 @@ const Tags = ({ data }) => {
         <section className="tags-page">
           {newTags.map((tag, index) => {
             const [text, value] = tag;
+<<<<<<< HEAD
             const slug = slugify(text, { lower: true });
             return (
               <Link to={`/tags/${slug}`} key={index} className="tag">
+=======
+            const tagSlug = slugify(text, { lower: true });
+            return (
+              <Link to={`/${tagSlug}`} key={index} className="tag">
+>>>>>>> tag-pages
                 <h5>{text}</h5>
-                <p>{value} recipe</p>
+                {/* {{ value } === 1 && <p>{value} recipe</p>} */}
+                <p>recipes: {value} </p>
               </Link>
             );
           })}
