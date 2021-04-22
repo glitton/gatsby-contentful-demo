@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FiAlignJustify } from "react-icons/fi";
-import logo from "../assets/images/pasta-logo.png";
+import logo from "../assets/images/pasta-logo2.png";
 // logo made by monkik https://www.flaticon.com/authors/monkik
 
 const Navbar = () => {
