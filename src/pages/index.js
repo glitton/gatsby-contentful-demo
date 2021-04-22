@@ -12,7 +12,7 @@ export default function Home() {
         <header className="hero">
           {/* Photo by Zoran Borojevic on Unsplash */}
           <StaticImage
-            src="../assets/images/main.webp"
+            src="../assets/images/main.jpg"
             alt="flour and eggs"
             className="hero-img"
             placeholder="tracedSVG"
