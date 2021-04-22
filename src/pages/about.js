@@ -34,7 +34,7 @@ const About = ({
             src="../assets/images/about.jpg"
             alt="pasta on a wooden spoon"
             className="about-img"
-            placeholder="blurred"
+            placeholder="tracedSVG"
           />
         </section>
         <section className="featured-recipes">
