@@ -11,9 +11,9 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "World of Shapes",
+    title: "Simply Shapes",
     description:
-      "Site about pasta shapes and example recipes.  Built do show the Gatsby and Contentful integration.",
+      "Site about pasta shapes and example recipes built on Gatsby and Contentful.",
     originalAuthor: "@johnsmilga",
     secondaryAuthor: "@LittonG",
     inspiration: "https://github.com/john-smilga/gatsby-v3-tutorial-recipes",
@@ -23,6 +23,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

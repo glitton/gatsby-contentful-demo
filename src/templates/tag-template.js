@@ -2,11 +2,13 @@ import React from "react";
 import { graphql } from "gatsby";
 import ShapesRecipes from "../components/ShapesRecipes";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 const TagTemplate = ({ data, pageContext }) => {
   const recipes = data.allContentfulShapesRecipes.nodes;
   return (
     <Layout>
+      <SEO title={pageContext.tag} />
       <main className="page">
         <h2>{pageContext.tag}</h2>
         <div className="tag-recipes">
