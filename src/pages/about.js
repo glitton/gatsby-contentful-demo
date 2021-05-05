@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
 import ShapesRecipes from "../components/ShapesRecipes";
@@ -11,7 +10,7 @@ const About = ({
   },
 }) => {
   return (
-    <Layout>
+    <>
       <SEO title="About" />
       <main className="page">
         <section className="about-page">
@@ -42,7 +41,7 @@ const About = ({
           <ShapesRecipes shapesRecipes={shapesRecipes} />
         </section>
       </main>
-    </Layout>
+    </>
   );
 };
 

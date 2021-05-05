@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import ShapesRecipes from "../components/ShapesRecipes";
 import SEO from "../components/SEO";
@@ -7,7 +6,7 @@ import SEO from "../components/SEO";
 const Contact = ({ data }) => {
   const shapesRecipes = data.allContentfulShapesRecipes.nodes;
   return (
-    <Layout>
+    <>
       <SEO title="Contact" />
       <main className="page">
         <section className="contact-page">
@@ -53,7 +52,7 @@ const Contact = ({ data }) => {
           <ShapesRecipes shapesRecipes={shapesRecipes} />
         </section>
       </main>
-    </Layout>
+    </>
   );
 };
 

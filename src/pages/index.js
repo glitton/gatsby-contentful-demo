@@ -1,12 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
 import AllShapesRecipes from "../components/AllShapesRecipes";
 import SEO from "../components/SEO";
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
       <main className="page">
         <header className="hero">
@@ -28,6 +27,6 @@ export default function Home() {
         </header>
         <AllShapesRecipes />
       </main>
-    </Layout>
+    </>
   );
 }
