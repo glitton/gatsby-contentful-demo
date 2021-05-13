@@ -44,7 +44,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud@2.6.0-alpha-gatsby-plugin-gatsby-cloud.37`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
