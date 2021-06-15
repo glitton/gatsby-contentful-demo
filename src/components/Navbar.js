@@ -44,6 +44,14 @@ const Navbar = () => {
             tags
           </Link>
           <Link
+            to="/blog"
+            className="nav-link"
+            activeClassName="active-link"
+            onClick={() => setshow(false)}
+          >
+            tags
+          </Link>
+          <Link
             to="/about"
             className="nav-link"
             activeClassName="active-link"
