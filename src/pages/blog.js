@@ -38,7 +38,7 @@ const Blog = ({
         </section>
         <section className="featured-recipes">
           <h5>Buon appetito!</h5>
-          <ShapesRecipes shapesRecipes={shapesRecipes} />
+          {/* <ShapesRecipes shapesRecipes={shapesRecipes} /> */}
         </section>
       </main>
     </>

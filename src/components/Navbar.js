@@ -49,7 +49,7 @@ const Navbar = () => {
             activeClassName="active-link"
             onClick={() => setshow(false)}
           >
-            tags
+            blogs
           </Link>
           <Link
             to="/about"
