@@ -1,35 +1,31 @@
 import React from "react";
-import TagsList from "./TagsList";
-import Blogs from "./Blogs";
 import { useStaticQuery, graphql } from "gatsby";
+import Blogs from "../components/Blogs";
 
 const query = graphql`
   {
-    allContentfulShapesRecipes(sort: { fields: title }) {
+    allContentfulBlogs(sort: { fields: blogDateTime }) {
       nodes {
-        id
-        title
-        prepTime
-        cookTime
-        content {
-          tags
+        blogTitle
+        blogContent {
+          raw
         }
         image {
           gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }
+        id
       }
     }
   }
 `;
 
-const AllShapesRecipes = () => {
+const AllBlogs = () => {
   const data = useStaticQuery(query);
-  const shapesRecipes = data.allContentfulShapesRecipes.nodes;
+  const blogs = data.allContentfulBlogs.nodes;
 
   return (
     <section className="recipes-container">
-      <TagsList shapesRecipes={shapesRecipes} />
-      <ShapesRecipes shapesRecipes={shapesRecipes} />
+      <Blogs blogs={blogs} />
     </section>
   );
 };

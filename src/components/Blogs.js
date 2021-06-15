@@ -6,23 +6,22 @@ import slugify from "slugify";
 const Blogs = ({ blogs = [] }) => {
   return (
     <div className="recipes-list">
-      {/* {shapesRecipes.map(shapeRecipe => {
-        const { id, title, image, prepTime, cookTime } = shapeRecipe;
+      {blogs.map(blog => {
+        const { blogTitle, blogContent, image, id } = blog;
         const pathToImage = getImage(image);
-        const slug = slugify(title, { lower: true }); */}
-      return (
-      {/* <Link key={id} to={`/${slug}`} className="recipe">
+        const slug = slugify(blogTitle, { lower: true });
+
+        return (
+          <Link key={id} to={`/${slug}`} className="recipe">
             <GatsbyImage
               image={pathToImage}
               className="recipe-img"
-              alt={title}
+              alt={blogTitle}
             />
-            <h5>{title}</h5>
-            <p>
-              Prep: {prepTime} min. | Cook: {cookTime} min.
-            </p>
-          </Link> */}
-      This goes to a blog page ); )
+            <h5>{blogTitle}</h5>
+          </Link>
+        );
+      })}
     </div>
   );
 };

@@ -33,7 +33,7 @@ module.exports = {
   siteMetadata: {
     title: "Simply Shapes",
     description:
-      "Site about pasta shapes and example recipes built on Gatsby and Contentful.",
+      "Site about pasta shapes, example recipes, and blog posts built on Gatsby and Contentful.",
     originalAuthor: "@johnsmilga",
     secondaryAuthor: "@LittonG",
     inspiration: "https://github.com/john-smilga/gatsby-v3-tutorial-recipes",
