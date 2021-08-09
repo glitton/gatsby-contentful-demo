@@ -12,14 +12,18 @@ const Blogs = ({ blogs = [] }) => {
         const slug = slugify(blogTitle, { lower: true });
 
         return (
-          <Link key={id} to={`/${slug}`} className="recipe">
-            <GatsbyImage
-              image={pathToImage}
-              className="recipe-img"
-              alt={blogTitle}
-            />
-            <h5>{blogTitle}</h5>
-          </Link>
+          <main>
+            <Link key={id} to={`/${slug}`} className="recipe">
+              <GatsbyImage
+                image={pathToImage}
+                className="recipe-img"
+                alt={blogTitle}
+              />
+
+              <h5>{blogTitle}</h5>
+              <p>{blogContent.raw}</p>
+            </Link>
+          </main>
         );
       })}
     </div>
