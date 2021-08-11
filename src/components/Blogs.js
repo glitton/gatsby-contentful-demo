@@ -21,7 +21,10 @@ const Blogs = ({ blogs = [] }) => {
               />
 
               <h5>{blogTitle}</h5>
-              <p>{blogContent.raw}</p>
+              <p>
+                {blogContent.raw}
+                <span>this is raw content fix this</span>
+              </p>
             </Link>
           </main>
         );
