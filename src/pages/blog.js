@@ -1,16 +1,14 @@
-import React from "react";
+import * as React from "react";
+import Layout from "../components/Layout";
 import AllBlogs from "../components/AllBlogs";
 import SEO from "../components/SEO";
 
-const Blogs = () => {
+const BlogPage = () => {
   return (
-    <>
-      <SEO title="Blogs" />
-      <main className="page">
-        <AllBlogs />
-      </main>
-    </>
+    <Layout>
+      <p>My blogs will go here</p>
+    </Layout>
   );
 };
 
-export default Blogs;
+export default BlogPage;
