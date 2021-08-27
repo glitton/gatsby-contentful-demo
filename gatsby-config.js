@@ -50,6 +50,8 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
+        name: `blog`,
+        path: `${__dirname}/blog`,
       },
     },
     {
