@@ -1,15 +1,20 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-
+//WHY DOES THIS RENDER OTHER STUFF THAT ISN'T IN THE MDX FORMAT???
+//Why does the MDX slug not capture the items in the metadata?  It captures the mdx file title instead.
 const BlogPage = ({ data }) => {
+  let blogArray = data.allMdx.nodes.filter(
+    item => item.frontmatter.date !== null
+  );
   return (
     <>
-      {data.allMdx.nodes.map(node => (
+      {blogArray.map(node => (
         <article key={node.id}>
-          <h2>{node.frontmatter.title}</h2>
+          <h2>
+            <Link to={`/blog/{node.slug`}>{node.frontmatter.title}</Link>
+          </h2>
           <p>Posted: {node.frontmatter.date}</p>
-          <MDXRenderer>{node.body}</MDXRenderer>
         </article>
       ))}
     </>
