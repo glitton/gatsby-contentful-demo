@@ -1,7 +1,6 @@
 import * as React from "react";
 
-const BlogPost = props => {
-  console.log(props);
+const BlogPost = () => {
   return (
     <>
       <p>My blog post contents will go here eventually.</p>
