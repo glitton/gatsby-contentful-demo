@@ -8,7 +8,7 @@ const BlogPage = ({ data }) => {
   return (
     <>
       {blogArray.map(node => (
-        <article key={node.id} className="page">
+        <article key={node.id}>
           <Link to={node.slug}>
             <h2>{node.frontmatter.title}</h2>
           </Link>
