@@ -694,6 +694,44 @@ form > *:last-child {
 }
 
 /*#########*/
+/* Blogs */
+/*#########*/
+
+.blog-page {
+  display: grid;
+  gap: 2rem;
+  padding: 1rem;
+}
+.blog {
+  background: var(--grey-700);
+  border-radius: var(--borderRadius);
+  text-align: center;
+  color: var(--white);
+  transition: var(--transition);
+  padding: 0.75rem 0;
+}
+.blog:hover {
+  background: var(--primary-500);
+}
+.blog h5,
+.blog p {
+  margin-bottom: 0;
+}
+.blog h5 {
+  font-weight: 600;
+}
+@media screen and (min-width: 576px) {
+  .blog-page {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .blog-page {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*#########*/
 /* Recipe Template */
 /*#########*/
 
