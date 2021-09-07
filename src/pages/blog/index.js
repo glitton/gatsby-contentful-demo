@@ -8,11 +8,11 @@ const BlogPage = ({ data }) => {
   return (
     <>
       {blogArray.map(node => (
-        <article key={node.id}>
-          <Link to={node.slug}>
-            <h2>{node.frontmatter.title}</h2>
+        <article key={node.id} className="blog-page">
+          <Link to={node.slug} className="blog">
+            <h5 className="blog">{node.frontmatter.title}</h5>
+            <p>{node.frontmatter.date}</p>
           </Link>
-          <p>{node.frontmatter.date}</p>
         </article>
       ))}
     </>
