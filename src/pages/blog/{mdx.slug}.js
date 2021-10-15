@@ -17,8 +17,12 @@ export const query = graphql`
   query MyQuery($id: String) {
     mdx(id: { eq: $id }) {
       frontmatter {
-        date
         title
+        date(formatString: "MMMM D, YYYY")
+        hero_image
+        hero_image_alt
+        hero_image_credit_link
+        hero_image_credit_text
       }
       body
     }
