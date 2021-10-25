@@ -12,12 +12,7 @@ const Contact = ({ data }) => {
         <section className="contact-page">
           <article className="contact-info">
             <h3>Contact Us Now!</h3>
-            <p>
-              We are constantly adding various pasta shapes that entice and
-              educate our audience. If you want to know more about a different
-              pasta shape and have a recipe you want to share, this is the space
-              to be!
-            </p>
+            <p>NEEDS CONTENT</p>
             <p>
               Send us a message and we will review your contribution and feature
               it in our shape and recipe of the month!
