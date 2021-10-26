@@ -58,6 +58,7 @@ module.exports = {
               family: "Open Sans Condensed",
               variants: ["300", "700"],
             },
+            "gatsby-plugin-mdx",
           ],
         },
       },
