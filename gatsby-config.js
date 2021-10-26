@@ -9,7 +9,6 @@ require("dotenv").config({
 });
 
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: "Simply Shapes",
     description:
@@ -52,6 +51,10 @@ module.exports = {
             {
               family: "Inconsolata",
               variants: ["400", "500", "600", "700"],
+            },
+            {
+              family: "Open Sans Condensed",
+              variants: ["300", "700"],
             },
           ],
         },
