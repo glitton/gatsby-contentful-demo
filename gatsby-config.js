@@ -8,28 +8,7 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const contentfulConfig = {
-  spaceId: process.env.CONTENTFUL_SPACE_ID,
-  accessToken:
-    process.env.CONTENTFUL_ACCESS_TOKEN ||
-    process.env.CONTENTFUL_DELIVERY_TOKEN,
-};
-
-if (process.env.CONTENTFUL_HOST) {
-  contentfulConfig.host = process.env.CONTENTFUL_HOST;
-  contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
-}
-
-const { spaceId, accessToken } = contentfulConfig;
-
-if (!spaceId || !accessToken) {
-  throw new Error(
-    "Contentful spaceId and the access token need to be provided."
-  );
-}
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: "Simply Shapes",
     description:
@@ -54,7 +33,11 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-contentful`,
-      options: contentfulConfig,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: `preview.contentful.com`,
+      },
     },
     {
       resolve: `gatsby-plugin-webfonts`,
@@ -68,6 +51,10 @@ module.exports = {
             {
               family: "Inconsolata",
               variants: ["400", "500", "600", "700"],
+            },
+            {
+              family: "Open Sans Condensed",
+              variants: ["300", "700"],
             },
           ],
         },
