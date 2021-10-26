@@ -12,15 +12,16 @@ const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken:
     process.env.CONTENTFUL_ACCESS_TOKEN ||
-    process.env.CONTENTFUL_DELIVERY_TOKEN,
+    process.env.CONTENTFUL_DELIVERY_TOKEN ||
+    process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
 };
+
+const { spaceId, accessToken } = contentfulConfig;
 
 if (process.env.CONTENTFUL_HOST) {
   contentfulConfig.host = process.env.CONTENTFUL_HOST;
   contentfulConfig.accessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
 }
-
-const { spaceId, accessToken } = contentfulConfig;
 
 if (!spaceId || !accessToken) {
   throw new Error(
@@ -54,7 +55,11 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-contentful`,
-      options: contentfulConfig,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: `preview.contentful.com`,
+      },
     },
     {
       resolve: `gatsby-plugin-webfonts`,
