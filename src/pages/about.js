@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby";
 import ShapesRecipes from "../components/ShapesRecipes";
 import SeoComp from "../components/SeoComp";
 
-const AboutTest = ({
+const About = ({
   data: {
     allContentfulShapesRecipes: { nodes: shapesRecipes },
   },
