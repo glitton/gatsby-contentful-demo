@@ -2,14 +2,14 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import setupTags from "../utils/setupTags";
 import slugify from "slugify";
-import SEO from "../components/SEO";
+import SeoComp from "../components/SeoComp";
 
 const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulShapesRecipes.nodes);
 
   return (
     <>
-      <SEO title="Tags" />
+      <SeoComp title="Tags" />
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {

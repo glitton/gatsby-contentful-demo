@@ -1,12 +1,12 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import AllShapesRecipes from "../components/AllShapesRecipes";
-import SEO from "../components/SEO";
+import SeoComp from "../components/SeoComp";
 
 export default function Home() {
   return (
     <>
-      <SEO title="Home" />
+      <SeoComp title="Home" />
       <main className="page">
         <header className="hero">
           {/* Photo by Zoran Borojevic on Unsplash */}

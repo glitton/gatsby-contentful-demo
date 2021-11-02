@@ -2,7 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
 import ShapesRecipes from "../components/ShapesRecipes";
-import SEO from "../components/SEO";
+import SeoComp from "../components/SeoComp";
 
 const AboutTest = ({
   data: {
@@ -11,7 +11,7 @@ const AboutTest = ({
 }) => {
   return (
     <>
-      <SEO title="About" />
+      <SeoComp title="About" />
       <main className="page">
         <section className="about-page">
           <article>

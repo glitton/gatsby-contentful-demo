@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
 import ShapesRecipes from "../components/ShapesRecipes";
-import SEO from "../components/SEO";
+import SeoComp from "../components/SeoComp";
 
 const Contact = ({ data }) => {
   const shapesRecipes = data.allContentfulShapesRecipes.nodes;
   return (
     <>
-      <SEO title="Contact" />
+      <SeoComp title="Contact" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">

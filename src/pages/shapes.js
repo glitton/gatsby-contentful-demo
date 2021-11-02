@@ -1,11 +1,11 @@
 import React from "react";
 import AllShapesRecipes from "../components/AllShapesRecipes";
-import SEO from "../components/SEO";
+import SeoComp from "../components/SeoComp";
 
 const Shapes = () => {
   return (
     <>
-      <SEO title="Shapes" />
+      <SeoComp title="Shapes" />
       <main className="page">
         <AllShapesRecipes />
       </main>

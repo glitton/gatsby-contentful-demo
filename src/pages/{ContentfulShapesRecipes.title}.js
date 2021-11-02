@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs";
 import slugify from "slugify";
-import SEO from "../components/SEO";
+import SeoComp from "../components/SeoComp";
 
 const ShapesRecipeTemplate = ({ data }) => {
   const {
@@ -20,7 +20,7 @@ const ShapesRecipeTemplate = ({ data }) => {
 
   return (
     <>
-      <SEO title={title} description={description} />
+      <SeoComp title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           {/* hero */}

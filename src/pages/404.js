@@ -1,10 +1,10 @@
 import React from "react";
-import SEO from "../components/SEO";
+import SeoComp from "../components/SeoComp";
 
 const Error = () => {
   return (
     <>
-      <SEO title="Error" />
+      <SeoComp title="Error" />
       <main className="error-page">
         <section>
           <h1>404</h1>
