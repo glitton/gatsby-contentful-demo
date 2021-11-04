@@ -33,7 +33,7 @@ const About = ({
             src="../assets/images/about.jpg"
             alt="pasta on a wooden spoon"
             className="about-img"
-            placeholder="blurred"
+            placeholder="dominantColor"
           />
         </section>
         <section className="featured-recipes">
