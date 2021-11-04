@@ -127,7 +127,7 @@ export const query = graphql`
       prepTime
       servings
       image {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
   }
