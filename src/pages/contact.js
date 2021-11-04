@@ -12,7 +12,6 @@ const Contact = ({ data }) => {
         <section className="contact-page">
           <article className="contact-info">
             <h3>Contact Us Now!</h3>
-            <p>NEEDS CONTENT</p>
             <p>
               Send us a message and we will review your contribution and feature
               it in our shape and recipe of the month!
@@ -66,7 +65,7 @@ export const query = graphql`
           id
         }
         image {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+          gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT COLOR)
         }
       }
     }
