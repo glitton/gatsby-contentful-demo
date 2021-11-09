@@ -9,7 +9,7 @@ const BlogPage = ({ data }) => {
     <>
       {blogArray.map(node => (
         <article key={node.id} className="blog-page">
-          <Link to={node.slug} className="blog">
+          <Link to={`/blog/${node.slug}`} className="blog">
             <h5 className="blog">{node.frontmatter.title}</h5>
             <p>{node.frontmatter.date}</p>
           </Link>
@@ -25,7 +25,7 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
-          date(formatString: "MMMM D, YYYY")
+          date
         }
         id
         slug
