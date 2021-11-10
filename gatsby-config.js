@@ -22,22 +22,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-mdx`,
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-            },
-          },
-        ],
+        defaults: {
+          quality: 70,
+          formats: ["auto", "webp", "avif"],
+          placeholder: "blurred",
+        },
       },
     },
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
