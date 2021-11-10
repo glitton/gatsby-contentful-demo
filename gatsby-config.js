@@ -19,11 +19,25 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -62,6 +76,5 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-mdx",
   ],
 };
