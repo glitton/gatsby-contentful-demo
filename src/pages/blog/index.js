@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 
 const BlogPage = ({ data }) => {
   return (
-    <div>
+    <div className="page">
       {data.allMdx.nodes.map(node => {
         return (
           <article key={node.id}>
