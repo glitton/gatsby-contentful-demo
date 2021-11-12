@@ -6,18 +6,28 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const BlogPost = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
-    <article className="page">
-      <h2>{data.mdx.frontmatter.title}</h2>
-      <p>{data.mdx.frontmatter.date}</p>
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
-      <p>
-        Photo Credit:{" "}
-        <a href={data.mdx.frontmatter.hero_image_credit_link}>
-          {data.mdx.frontmatter.hero_image_credit_text}
-        </a>
-      </p>
-      <MDXRenderer>{data.mdx.body}</MDXRenderer>
-    </article>
+    <main className="page">
+      <div className="recipe-page">
+        <section className="recipe-hero">
+          <GatsbyImage
+            image={image}
+            alt={data.mdx.frontmatter.hero_image_alt}
+            className="about-img"
+          />
+          <article className="recipe-info">
+            <h2>{data.mdx.frontmatter.title}</h2>
+            <p>{data.mdx.frontmatter.date}</p>
+            <p>
+              Photo Credit:{" "}
+              <a href={data.mdx.frontmatter.hero_image_credit_link}>
+                {data.mdx.frontmatter.hero_image_credit_text}
+              </a>
+            </p>
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          </article>
+        </section>
+      </div>
+    </main>
   );
 };
 
