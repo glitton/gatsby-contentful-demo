@@ -31,6 +31,40 @@ const BlogPost = ({ data }) => {
   );
 };
 
+// export async function config() {
+//   const { data } = graphql`
+//     {
+//       oldPosts: allMdx(
+//         filter: { frontmatter: { date: { ne: null, lt: "2021-06-20" } } }
+//       ) {
+//         nodes {
+//           frontmatter {
+//             date
+//             title
+//           }
+//           slug
+//         }
+//       }
+//     }
+//   `;
+
+//   const oldPosts = new Set(
+//     data.oldPosts.nodes.map(node => node.frontmatter.slug)
+//   );
+
+//   return ({ params }) => {
+//     defer: oldPosts.has(params.frontmatter__slug);
+//   };
+// }
+//Defer all blogs
+export async function config() {
+  return ({ params }) => {
+    return {
+      defer: true,
+    };
+  };
+}
+
 export const query = graphql`
   query BlogQuery($id: String) {
     mdx(id: { ne: null, eq: $id }) {
@@ -52,30 +86,5 @@ export const query = graphql`
     }
   }
 `;
-
-export async function config() {
-  const { data } = graphql`
-    {
-      oldPosts: allMdx(
-        filter: { frontmatter: { date: { ne: null, lt: "2021-20-06" } } }
-      ) {
-        nodes {
-          frontmatter {
-            date
-          }
-          slug
-        }
-      }
-    }
-  `;
-
-  const oldPosts = new Set(
-    data.oldPosts.nodes.map(node => node.frontmatter.slug)
-  );
-
-  return ({ params }) => {
-    defer: oldPosts.has(params.frontmatter__slug);
-  };
-}
 
 export default BlogPost;
