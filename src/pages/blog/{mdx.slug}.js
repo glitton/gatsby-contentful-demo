@@ -71,7 +71,7 @@ export const query = graphql`
       frontmatter {
         hero_image {
           childImageSharp {
-            gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
           }
         }
         hero_image_alt
