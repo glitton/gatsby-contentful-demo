@@ -51,4 +51,26 @@ export const query = graphql`
   }
 `;
 
+export async function config() {
+  const { data } = graphql`
+    {
+      oldPosts: allMarkdownRemark(
+        filter: { frontmatter: { date: { lt: "2021-06-25" } } }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  `;
+
+  const oldPosts = new Set(data.oldPosts.nodes.map(n => n.frontmatter.slug));
+
+  return ({ params }) => {
+    defer: oldPosts.has(params.frontmatter__slug);
+  };
+}
+
 export default BlogPost;
