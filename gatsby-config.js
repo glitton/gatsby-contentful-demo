@@ -25,6 +25,16 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-mdx`,
     {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          quality: 70,
+          formats: ["auto", "webp", "avif"],
+          placeholder: "blurred",
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
