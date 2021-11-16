@@ -47,8 +47,40 @@ export const query = graphql`
       }
       body
       id
+      slug
     }
   }
 `;
+
+export async function config() {
+  const { data } = graphql`
+    {
+      oldPosts: allMdx(
+        filter: { frontmatter: { date: { lt: "2021-06-25" } } }
+      ) {
+        nodes {
+          frontmatter {
+            date
+          }
+          slug
+        }
+      }
+    }
+  `;
+
+  const oldPosts = new Set(data.oldPosts.nodes.map(node => node.slug));
+
+  return ({ params }) => {
+    return {
+      defer: oldPosts.has(params.slug),
+    };
+  };
+
+  // return ({ params }) => {
+  //   return {
+  //     defer: true,
+  //   };
+  // };
+}
 
 export default BlogPost;
