@@ -19,11 +19,21 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          quality: 70,
+          formats: ["auto", "webp", "avif"],
+          placeholder: "blurred",
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -60,6 +70,5 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-mdx",
   ],
 };
