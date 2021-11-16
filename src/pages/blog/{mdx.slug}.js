@@ -47,6 +47,7 @@ export const query = graphql`
       }
       body
       id
+      slug
     }
   }
 `;
@@ -54,23 +55,32 @@ export const query = graphql`
 export async function config() {
   const { data } = graphql`
     {
-      oldPosts: allMarkdownRemark(
+      oldPosts: allMdx(
         filter: { frontmatter: { date: { lt: "2021-06-25" } } }
       ) {
         nodes {
           frontmatter {
-            slug
+            date
           }
+          slug
         }
       }
     }
   `;
 
-  const oldPosts = new Set(data.oldPosts.nodes.map(n => n.frontmatter.slug));
+  const oldPosts = new Set(data.oldPosts.nodes.map(node => node.slug));
 
   return ({ params }) => {
-    defer: oldPosts.has(params.frontmatter__slug);
+    return {
+      defer: oldPosts.has(params.slug),
+    };
   };
+
+  // return ({ params }) => {
+  //   return {
+  //     defer: true,
+  //   };
+  // };
 }
 
 export default BlogPost;
