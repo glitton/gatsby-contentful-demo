@@ -14,7 +14,7 @@ export default function Home() {
             src="../assets/images/main.jpg"
             alt="flour and eggs"
             className="hero-img"
-            placeholder="dominantColor"
+            placeholder="tracedSVG"
             layout="fullWidth"
             loading="eager"
           />
