@@ -1,31 +1,33 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
-//WHY DOES THIS RENDER OTHER STUFF THAT ISN'T IN THE MDX FORMAT???
+
 const BlogPage = ({ data }) => {
-  let blogArray = data.allMdx.nodes.filter(
-    item => item.frontmatter.date !== null
-  );
   return (
-    <>
-      {blogArray.map(node => (
-        <article key={node.id} className="blog-page">
-          <Link to={node.slug} className="blog">
-            <h5 className="blog">{node.frontmatter.title}</h5>
-            <p>{node.frontmatter.date}</p>
-          </Link>
-        </article>
-      ))}
-    </>
+    <div className="page">
+      {data.allMdx.nodes.map(node => {
+        return (
+          <article key={node.id}>
+            <h3>
+              <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
+            </h3>
+            <p>Posted: {node.frontmatter.date}</p>
+          </article>
+        );
+      })}
+    </div>
   );
 };
 
 export const query = graphql`
-  {
-    allMdx(sort: { order: DESC, fields: frontmatter___date }) {
+  query {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { date: { ne: null } } }
+    ) {
       nodes {
         frontmatter {
           title
-          date(formatString: "MMMM D, YYYY")
+          date(formatString: "MMMM DD, YYYY")
         }
         id
         slug
