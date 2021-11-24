@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const BlogPost = ({ data }) => {
+const BlogPostTemplate = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
     <main className="page">
@@ -75,12 +75,6 @@ export async function config() {
       defer: oldPosts.has(params.slug),
     };
   };
-
-  // return ({ params }) => {
-  //   return {
-  //     defer: true,
-  //   };
-  // };
 }
 
-export default BlogPost;
+export default BlogPostTemplate;
