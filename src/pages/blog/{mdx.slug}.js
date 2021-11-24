@@ -52,7 +52,7 @@ export const query = graphql`
   }
 `;
 
-// DSG Configuration, defer blogs older than June 25, 2021
+// DSG Configuration: Set up to defer blogs older than June 25, 2021
 export async function config() {
   const { data } = graphql`
     {
