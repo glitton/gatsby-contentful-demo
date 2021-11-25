@@ -37,7 +37,7 @@ export const query = graphql`
       frontmatter {
         hero_image {
           childImageSharp {
-            gatsbyImageData(placeholder: TRACED_SVG, layout: CONSTRAINED)
+            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
           }
         }
         hero_image_alt
@@ -52,7 +52,7 @@ export const query = graphql`
   }
 `;
 
-// DSG Configuration, defer blogs older than June 25, 2021
+// DSG Configuration: Set up to defer blogs older than June 25, 2021
 export async function config() {
   const { data } = graphql`
     {
@@ -72,6 +72,7 @@ export async function config() {
   const oldPosts = new Set(data.oldPosts.nodes.map(node => node.slug));
 
   return ({ params }) => {
+    // console.log("oldPosts", oldPosts);
     return {
       defer: oldPosts.has(params.slug),
     };
