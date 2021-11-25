@@ -28,3 +28,6 @@ export async function getServerData() {
     };
   }
 }
+
+// Query in Postman
+// https://api.spoonacular.com/recipes/search?apiKey=0118958c772140398f2ad45ecdb7d68c&number=10&query=pasta
