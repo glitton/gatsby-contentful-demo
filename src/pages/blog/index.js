@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+// import PastaImageSSR from "../../components/PastaImageSSR";
 
 const BlogPage = ({ data }) => {
   return (
@@ -14,6 +15,7 @@ const BlogPage = ({ data }) => {
           </article>
         );
       })}
+      {/* <PastaImageSSR /> */}
     </div>
   );
 };
