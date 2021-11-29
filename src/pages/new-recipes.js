@@ -14,7 +14,6 @@ const NewRecipes = ({ serverData }) => {
         <Link to={newRecipe.sourceUrl} target="_blank">
           {newRecipe.title}
         </Link>
-        {/* {recipeImageUrl} */}
         <img src={recipeImageUrl} alt="pasta" className="about-img" />
       </p>
     </main>
