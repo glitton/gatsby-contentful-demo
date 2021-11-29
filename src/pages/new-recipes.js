@@ -1,18 +1,21 @@
 import * as React from "react";
+import { Link } from "gatsby";
 
 const NewRecipes = ({ serverData }) => {
   // Get 50 pasta recipes
   let pastaIndex = Math.floor(Math.random() * 19);
   const newRecipe = serverData.results[pastaIndex];
-  console.log(newRecipe.title);
+  const recipeImageUrl = `https://spoonacular.com/recipeImages/${newRecipe.id}-556x370.jpg`;
+  console.log();
   return (
     <main className="page">
-      <h1>Tasty New Recipes!</h1>
+      <h1>New Recipe for the Day!</h1>
       <p>
-        Check out this new pasta recipe for the day:{" "}
-        <a href={newRecipe.sourceUrl} target="_blank">
+        <Link to={newRecipe.sourceUrl} target="_blank">
           {newRecipe.title}
-        </a>
+        </Link>
+        {/* {recipeImageUrl} */}
+        <img src={recipeImageUrl} alt="pasta" className="about-img" />
       </p>
     </main>
   );
