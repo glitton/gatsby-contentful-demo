@@ -26,7 +26,7 @@ export default NewRecipes;
 export async function getServerData() {
   try {
     const res = await fetch(
-      `https://api.spoonacular.com/recipes/search?apiKey=0118958c772140398f2ad45ecdb7d68c&number=10&query=pasta`
+      `https://api.spoonacular.com/recipes/search?apiKey=${process.env.GATSBY_SPOONACULAR_API_KEY}&number=10&query=pasta`
     );
 
     if (!res.ok) {
