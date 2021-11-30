@@ -18,7 +18,13 @@ const NewRecipes = ({ serverData }) => {
             </Link>
             <br />
             Ready in {newRecipe.readyInMinutes} minutes and serves{" "}
-            {newRecipe.servings}
+            {newRecipe.servings}.
+            <br />
+            Click{" "}
+            <Link to={newRecipe.sourceUrl} target="_blank">
+              here
+            </Link>{" "}
+            to learn more.
           </p>
         </article>
         <img src={recipeImageUrl} alt="pasta" className="about-img" />
