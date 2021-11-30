@@ -49,7 +49,7 @@ const Navbar = () => {
             activeClassName="active-link"
             onClick={() => setshow(false)}
           >
-            blog
+            blogs
           </Link>
           <Link
             to="/new-recipes"
