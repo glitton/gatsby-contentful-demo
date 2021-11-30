@@ -75,12 +75,6 @@ export async function config() {
       defer: oldPosts.has(params.slug),
     };
   };
-
-  // return ({ params }) => {
-  //   return {
-  //     defer: true,
-  //   };
-  // };
 }
 
 export default BlogPost;
