@@ -2,20 +2,27 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 const NewRecipes = ({ serverData }) => {
-  // Get 18 random pasta recipes from the spoonacular API
-  let pastaIndex = Math.floor(Math.random() * 19);
+  // Get 15 random pasta recipes from the spoonacular API
+  let pastaIndex = Math.floor(Math.random() * 16);
   const newRecipe = serverData.results[pastaIndex];
   const recipeImageUrl = `https://spoonacular.com/recipeImages/${newRecipe.id}-556x370.jpg`;
   console.log();
   return (
     <main className="page">
-      <h1>New Recipe for the Day!</h1>
-      <p>
-        <Link to={newRecipe.sourceUrl} target="_blank">
-          {newRecipe.title}
-        </Link>
+      <section className="about-page">
+        <article>
+          <h2>New Recipe for the Day!</h2>
+          <p>
+            <Link to={newRecipe.sourceUrl} target="_blank">
+              <h4>{newRecipe.title}</h4>
+            </Link>
+            <br />
+            Ready in {newRecipe.readyInMinutes} minutes and serves{" "}
+            {newRecipe.servings}
+          </p>
+        </article>
         <img src={recipeImageUrl} alt="pasta" className="about-img" />
-      </p>
+      </section>
     </main>
   );
 };
