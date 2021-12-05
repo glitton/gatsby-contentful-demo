@@ -2,37 +2,32 @@ import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import SeoComp from "../../components/SeoComp";
 
 const BlogPostTemplate = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
-    <>
-      <SeoComp title="Blog">
-        <main className="page">
-          <div className="recipe-page">
-            <section className="recipe-hero">
-              <GatsbyImage
-                image={image}
-                alt={data.mdx.frontmatter.hero_image_alt}
-                className="about-img"
-              />
-              <article className="recipe-info">
-                <h2>{data.mdx.frontmatter.title}</h2>
-                <p>{data.mdx.frontmatter.date}</p>
-                <p>
-                  Photo Credit:{" "}
-                  <a href={data.mdx.frontmatter.hero_image_credit_link}>
-                    {data.mdx.frontmatter.hero_image_credit_text}
-                  </a>
-                </p>
-                <MDXRenderer>{data.mdx.body}</MDXRenderer>
-              </article>
-            </section>
-          </div>
-        </main>
-      </SeoComp>
-    </>
+    <main className="page">
+      <div className="recipe-page">
+        <section className="recipe-hero">
+          <GatsbyImage
+            image={image}
+            alt={data.mdx.frontmatter.hero_image_alt}
+            className="about-img"
+          />
+          <article className="recipe-info">
+            <h2>{data.mdx.frontmatter.title}</h2>
+            <p>{data.mdx.frontmatter.date}</p>
+            <p>
+              Photo Credit:{" "}
+              <a href={data.mdx.frontmatter.hero_image_credit_link}>
+                {data.mdx.frontmatter.hero_image_credit_text}
+              </a>
+            </p>
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          </article>
+        </section>
+      </div>
+    </main>
   );
 };
 
