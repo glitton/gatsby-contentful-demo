@@ -2,8 +2,8 @@ import * as React from "react";
 import { Link } from "gatsby";
 
 const NewRecipes = ({ serverData }) => {
-  // Get 15 random pasta recipes from the spoonacular API
-  let pastaIndex = Math.floor(Math.random() * 16);
+  // Get 20 random pasta recipes from the spoonacular API
+  let pastaIndex = Math.floor(Math.random() * 21);
   const newRecipe = serverData.results[pastaIndex];
   const recipeImageUrl = `https://spoonacular.com/recipeImages/${newRecipe.id}-556x370.jpg`;
   console.log();
