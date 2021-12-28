@@ -16,15 +16,8 @@ const About = ({
         <section className="about-page">
           <article>
             <h2>We Are All About Pasta Shapes!</h2>
-            <p>
-              Pastas come in all kinds of shapes. Long, short, curly, bowties
-              and even those that look like little ears! Learn about them here
-              and understand the differences between a rotini and a tortellini
-              or a farfelle and a taglatielle.
-            </p>
-            <p>
-              Come back often to check out new shapes as well as new recipes!
-            </p>
+            <p>Add stuff.</p>
+            <p>Needs a sentence about new recipes.</p>
             <Link to="/contact" className="btn">
               contact
             </Link>
