@@ -6,7 +6,7 @@ const NewRecipes = ({ serverData }) => {
   let pastaIndex = Math.floor(Math.random() * 16);
   const newRecipe = serverData.results[pastaIndex];
   const recipeImageUrl = `https://spoonacular.com/recipeImages/${newRecipe.id}-556x370.jpg`;
-  console.log();
+  // console.log();
   return (
     <main className="page">
       <section className="about-page">
