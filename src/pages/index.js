@@ -20,7 +20,7 @@ export default function Home() {
           />
           <div className="hero-container">
             <div className="hero-text">
-              <h1>Simply Shapes</h1>
+              <h1>Simply Recipe</h1>
               <h4>pasta shapes with bonus recipes</h4>
             </div>
           </div>
