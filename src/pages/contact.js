@@ -11,7 +11,7 @@ const Contact = ({ data }) => {
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
-            <h3>Contact Form Goes Here</h3>
+            <h3>Contact Us!</h3>
             <p>
               Send us a message and we will review your contribution and feature
               it in our shape and recipe of the month!
