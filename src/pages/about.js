@@ -15,7 +15,7 @@ const About = ({
       <main className="page">
         <section className="about-page">
           <article>
-            <h2>Add Headline Here</h2>
+            <h2>Headline Goes Here!</h2>
             <p>
               Cream cheese the big cheese feta. Smelly cheese roquefort stinking
               bishop monterey jack dolcelatte babybel cut the cheese paneer. Red
