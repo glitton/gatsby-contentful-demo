@@ -40,7 +40,7 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
         contentTypeFilter: contentType =>
-          !shapesRecipes.sys.id.startsWith("ravioli"),
+          !contentType.sys.id.startsWith("Blogs"),
       },
     },
     {
