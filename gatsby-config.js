@@ -40,7 +40,7 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
         contentTypeFilter: contentType =>
-          !contentType.sys.id.startsWith("Blogs"),
+          !shapesRecipes.sys.id.startsWith("ravioli"),
       },
     },
     {
@@ -49,8 +49,6 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: `preview.contentful.com`,
-        contentTypeFilter: contentType =>
-          !contentType.sys.id.startsWith("Blogs"),
       },
     },
     {
