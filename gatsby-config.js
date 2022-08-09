@@ -38,18 +38,13 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN,
+        accessToken:
+          process.env.CONTENTFUL_DELIVERY_TOKEN ||
+          process.env.PREVIEW_ACCESS_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
         contentTypeFilter: contentType => contentType.sys.id !== "blogs",
       },
     },
-    // {
-    //   resolve: `gatsby-source-contentful`,
-    //   options: {
-    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
-    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    //     host: `preview.contentful.com`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
