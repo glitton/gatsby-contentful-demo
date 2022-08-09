@@ -42,14 +42,14 @@ module.exports = {
         contentTypeFilter: contentType => contentType.sys.id !== "blogs",
       },
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        host: `preview.contentful.com`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
+    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    //     host: `preview.contentful.com`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
