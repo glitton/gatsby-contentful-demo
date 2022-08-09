@@ -39,8 +39,8 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken:
-          process.env.CONTENTFUL_DELIVERY_TOKEN ||
-          process.env.PREVIEW_ACCESS_TOKEN,
+          process.env.CONTENTFUL_ACCESS_TOKEN ||
+          process.env.CONTENTFUL_DELIVERY_TOKEN,
         host: process.env.CONTENTFUL_HOST,
         contentTypeFilter: contentType => contentType.sys.id !== "blogs",
       },
