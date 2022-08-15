@@ -15,13 +15,12 @@ const About = ({
       <main className="page">
         <section className="about-page">
           <article>
-            <h2>Headline Goes Here!</h2>
+            <h2>We Are All About Pasta Shapes!</h2>
             <p>
-              Cream cheese the big cheese feta. Smelly cheese roquefort stinking
-              bishop monterey jack dolcelatte babybel cut the cheese paneer. Red
-              leicester bavarian bergkase dolcelatte hard cheese feta
-              cheeseburger queso pecorino. Feta port-salut cheese on toast gouda
-              cheese and biscuits cheese on toast.
+              Pastas come in all kinds of shapes. Long, short, curly, bowties
+              and even those that look like little ears! Learn about them here
+              and understand the differences between a rotini and a tortellini
+              or a farfelle and a taglatielle.
             </p>
             <p>
               Come back often and checkout new shapes as well as new tasty
