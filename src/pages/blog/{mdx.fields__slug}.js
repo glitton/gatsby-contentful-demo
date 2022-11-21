@@ -1,9 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const BlogPostTemplate = ({ data }) => {
+const BlogPostTemplate = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
     <main className="page">
@@ -23,7 +22,7 @@ const BlogPostTemplate = ({ data }) => {
                 {data.mdx.frontmatter.hero_image_credit_text}
               </a>
             </p>
-            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+            {children}
           </article>
         </section>
       </div>
@@ -45,9 +44,10 @@ export const query = graphql`
         hero_image_credit_text
         title
       }
-      body
+      fields {
+        slug
+      }
       id
-      slug
     }
   }
 `;
@@ -63,18 +63,20 @@ export async function config() {
           frontmatter {
             date
           }
-          slug
+          fields {
+            slug
+          }
         }
       }
     }
   `;
 
-  const oldPosts = new Set(data.oldPosts.nodes.map(node => node.slug));
+  const oldPosts = new Set(data.oldPosts.nodes.map(node => node.fields.slug));
 
   return ({ params }) => {
-    // console.log("oldPosts", oldPosts);
+    console.log("oldPosts", oldPosts);
     return {
-      defer: oldPosts.has(params.slug),
+      defer: oldPosts.has(params.fields__slug),
     };
   };
 }

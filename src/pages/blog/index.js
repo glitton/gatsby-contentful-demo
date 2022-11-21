@@ -8,7 +8,10 @@ const BlogPage = ({ data }) => {
         return (
           <article key={node.id}>
             <h4>
-              <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
+              {/* Note: Gatsby adds a trailing slash after blog */}
+              <Link to={`/blog${node.fields.slug}`}>
+                {node.frontmatter.title}
+              </Link>
             </h4>
             <p>Posted: {node.frontmatter.date}</p>
           </article>
@@ -21,17 +24,19 @@ const BlogPage = ({ data }) => {
 export const query = graphql`
   query {
     allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
       filter: { frontmatter: { date: { ne: null } } }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
         frontmatter {
-          title
           date(formatString: "MMMM DD, YYYY")
+          title
+        }
+        fields {
+          slug
         }
         id
-        body
-        slug
+        # body
       }
     }
   }

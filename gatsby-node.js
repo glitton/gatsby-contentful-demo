@@ -1,6 +1,7 @@
 //Create tag pages programatically
 const path = require("path");
 const slugify = require("slugify");
+const { createFilePath } = require("gatsby-source-filesystem");
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -28,4 +29,14 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     });
   });
+};
+
+exports.onCreateNode = ({ node, getNode, actions: { createNodeField } }) => {
+  if (node.internal.type === "Mdx") {
+    createNodeField({
+      node,
+      name: "slug",
+      value: createFilePath({ node, getNode }),
+    });
+  }
 };
