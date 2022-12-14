@@ -21,7 +21,7 @@ const TagTemplate = ({ data, pageContext }) => {
 export const query = graphql`
   query GetRecipeByTag($tag: String) {
     allContentfulShapesRecipes(
-      sort: { fields: title, order: ASC }
+      sort: { title: ASC }
       filter: { content: { tags: { eq: $tag } } }
     ) {
       nodes {

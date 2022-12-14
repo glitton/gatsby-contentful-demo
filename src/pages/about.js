@@ -52,7 +52,7 @@ const About = ({
 export const query = graphql`
   {
     allContentfulShapesRecipes(
-      sort: { fields: title }
+      sort: { title: ASC }
       filter: { featured: { eq: true } }
     ) {
       nodes {

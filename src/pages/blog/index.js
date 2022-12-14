@@ -25,7 +25,7 @@ export const query = graphql`
   query {
     allMdx(
       filter: { frontmatter: { date: { ne: null } } }
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       nodes {
         frontmatter {
@@ -36,7 +36,6 @@ export const query = graphql`
           slug
         }
         id
-        # body
       }
     }
   }
