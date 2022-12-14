@@ -14,9 +14,11 @@ const ShapesRecipeTemplate = ({ data }) => {
     prepTime,
     servings,
     image,
+    document,
   } = data.contentfulShapesRecipes;
   const pathToImage = getImage(image);
   const { ingredients, instructions, tags, tools } = content;
+  const { file } = document;
 
   return (
     <>
@@ -80,6 +82,9 @@ const ShapesRecipeTemplate = ({ data }) => {
                   </div>
                 );
               })}
+              <header>
+                Bonus <Link to={file.url}>Cool Recipe</Link>
+              </header>
             </article>
             <article className="second-column">
               <div>
@@ -128,6 +133,11 @@ export const query = graphql`
       servings
       image {
         gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+      document {
+        file {
+          url
+        }
       }
     }
   }
