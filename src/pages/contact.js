@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import ShapesRecipes from "../components/ShapesRecipes";
 import SeoComp from "../components/SeoComp";
 
@@ -17,7 +17,7 @@ const Contact = ({ data }) => {
               it in our shape and recipe of the month!
             </p>
             <header>
-              Check our Monthly Bonus Recipes:
+              Bonus Recipe:
               <Link
                 to="https://assets.ctfassets.net/o62tirnq6l08/6kkpnqyeMnqM644mQjqJKe/8aa2cffe3ea8f9418821e69e070888f6/GemelliRecipe.pdf"
                 target="_blank"
