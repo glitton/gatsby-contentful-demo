@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const query = graphql`
   {
-    allContentfulShapesRecipes(sort: { fields: title }) {
+    allContentfulShapesRecipes(sort: { title: ASC }) {
       nodes {
         id
         title
