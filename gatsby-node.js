@@ -3,7 +3,7 @@ const path = require("path");
 const slugify = require("slugify");
 const { createFilePath } = require("gatsby-source-filesystem");
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   const result = await graphql(`
     query GetRecipes {
@@ -28,6 +28,12 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       });
     });
+  });
+
+  createRedirect({
+    fromPath: `/documents`,
+    toPath: `https://assets.ctfassets.net/o62tirnq6l08/6kkpnqyeMnqM644mQjqJKe/8aa2cffe3ea8f9418821e69e070888f6/GemelliRecipe.pdf`,
+    statusCode: 200,
   });
 };
 
