@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import ShapesRecipes from "../components/ShapesRecipes";
 import SeoComp from "../components/SeoComp";
 
@@ -18,12 +18,13 @@ const Contact = ({ data }) => {
             </p>
             <header>
               Bonus Recipe:
-              <Link
-                to="https://assets.ctfassets.net/o62tirnq6l08/6kkpnqyeMnqM644mQjqJKe/8aa2cffe3ea8f9418821e69e070888f6/GemelliRecipe.pdf"
+              <a
+                href="/static/documents/GemelliRecipe.pdf"
                 target="_blank"
+                rel="norefer"
               >
                 Gemelli Pasta Recipe
-              </Link>
+              </a>
             </header>
           </article>
           <article>

@@ -29,12 +29,6 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     });
   });
-
-  createRedirect({
-    fromPath: `/document`,
-    toPath: `https://assets.ctfassets.net/o62tirnq6l08/6kkpnqyeMnqM644mQjqJKe/8aa2cffe3ea8f9418821e69e070888f6/GemelliRecipe.pdf`,
-    statusCode: 200,
-  });
 };
 
 exports.onCreateNode = ({ node, getNode, actions: { createNodeField } }) => {
