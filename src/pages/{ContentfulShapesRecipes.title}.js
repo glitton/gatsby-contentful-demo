@@ -80,15 +80,6 @@ const ShapesRecipeTemplate = ({ data }) => {
                   </div>
                 );
               })}
-              <header>
-                Bonus:{" "}
-                <Link
-                  to="https://assets.ctfassets.net/o62tirnq6l08/6kkpnqyeMnqM644mQjqJKe/8aa2cffe3ea8f9418821e69e070888f6/GemelliRecipe.pdf"
-                  target="_blank"
-                >
-                  New Recipe
-                </Link>
-              </header>
             </article>
             <article className="second-column">
               <div>
