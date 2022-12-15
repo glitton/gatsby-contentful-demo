@@ -19,7 +19,7 @@ const Contact = ({ data }) => {
             <header>
               Bonus Recipe:
               <a
-                href="/static/documents/GemelliRecipe.pdf"
+                href="/documents/GemelliRecipe.pdf"
                 target="_blank"
                 rel="noreferrer noopener"
               >
