@@ -64,7 +64,7 @@ export const query = graphql`
           id
         }
         image {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+          gatsbyImage(layout: CONSTRAINED, placeholder: BLURRED, width: 473)
         }
       }
     }
