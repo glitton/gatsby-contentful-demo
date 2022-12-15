@@ -3,7 +3,7 @@ const path = require("path");
 const slugify = require("slugify");
 const { createFilePath } = require("gatsby-source-filesystem");
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   const result = await graphql(`
     query GetRecipes {

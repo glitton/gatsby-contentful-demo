@@ -16,6 +16,16 @@ const Contact = ({ data }) => {
               Send us a message and we will review your contribution and feature
               it in our shape and recipe of the month!
             </p>
+            <header>
+              Bonus Recipe:
+              <a
+                href="/static/documents/GemelliRecipe.pdf"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Gemelli Pasta Recipe
+              </a>
+            </header>
           </article>
           <article>
             <form
