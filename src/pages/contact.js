@@ -18,7 +18,7 @@ const Contact = ({ data }) => {
             </p>
             <header>
               Bonus Recipe:
-              <a to="/documents" target="_blank" rel="noreferrer noopener">
+              <a href="/documents" target="_blank" rel="noreferrer noopener">
                 Gemelli Pasta Recipe
               </a>
             </header>
