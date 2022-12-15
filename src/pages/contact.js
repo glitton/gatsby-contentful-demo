@@ -21,7 +21,7 @@ const Contact = ({ data }) => {
               <a
                 href="/static/documents/GemelliRecipe.pdf"
                 target="_blank"
-                rel="norefer"
+                rel="noreferrer noopener"
               >
                 Gemelli Pasta Recipe
               </a>
