@@ -36,7 +36,11 @@ export const query = graphql`
       frontmatter {
         hero_image {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+            gatsbyImageData(
+              layout: CONSTRAINED
+              placeholder: DOMINANT_COLOR
+              width: 473
+            )
           }
         }
         hero_image_alt
