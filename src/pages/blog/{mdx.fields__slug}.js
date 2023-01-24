@@ -52,12 +52,12 @@ export const query = graphql`
   }
 `;
 
-// DSG Configuration: Set up to defer blogs older than June 25, 2021
+// DSG Configuration: Set up to defer blogs older than July 10, 2021
 export async function config() {
   const { data } = graphql`
     {
       oldPosts: allMdx(
-        filter: { frontmatter: { date: { lt: "2021-06-25" } } }
+        filter: { frontmatter: { date: { lt: "2021-07-10" } } }
       ) {
         nodes {
           frontmatter {
@@ -74,7 +74,7 @@ export async function config() {
   const oldPosts = new Set(data.oldPosts.nodes.map(node => node.fields.slug));
 
   return ({ params }) => {
-    // console.log("oldPosts", oldPosts);
+    console.log("oldPosts", oldPosts);
     return {
       defer: oldPosts.has(params.fields__slug),
     };
