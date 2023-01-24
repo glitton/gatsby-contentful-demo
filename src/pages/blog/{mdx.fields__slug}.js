@@ -74,7 +74,7 @@ export async function config() {
   const oldPosts = new Set(data.oldPosts.nodes.map(node => node.fields.slug));
 
   return ({ params }) => {
-    console.log("oldPosts", oldPosts);
+    // console.log("oldPosts", oldPosts);
     return {
       defer: oldPosts.has(params.fields__slug),
     };
