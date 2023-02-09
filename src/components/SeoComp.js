@@ -22,7 +22,9 @@ const SeoComp = ({ title, description }) => {
       htmlAttribute={{ lang: "en" }}
       title={`${title} | ${site.siteMetadata.title}`}
       meta={[{ name: `description`, content: metaDescription }]}
-    ></Helmet>
+    >
+      <script async type="text/javascript" src="../assets/js/newrelic.js" />
+    </Helmet>
   );
 };
 
