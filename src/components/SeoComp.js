@@ -23,7 +23,7 @@ const SeoComp = ({ title, description }) => {
       title={`${title} | ${site.siteMetadata.title}`}
       meta={[{ name: `description`, content: metaDescription }]}
     >
-      <script async type="text/javascript" src="../assets/js/newrelic.js" />
+      <script async type="text/javascript" src="src/assets/js/newrelic.js" />
     </Helmet>
   );
 };
