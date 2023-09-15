@@ -11,7 +11,7 @@ const Contact = ({ data }) => {
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
-            <h3>Add heading here.</h3>
+            <h3>Share Your Recipe With Me!</h3>
             <p>
               Send us a message and we will review your contribution and feature
               it in our shape and recipe of the month!
